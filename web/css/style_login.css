@@ -113,8 +113,10 @@ body.login {
 .login input:focus {
   background-color: rgba(40, 52, 67, 0.75);
   border: 1px solid #4a525f;
-  color: #eee;
+  color: #3a3a3a;
+  font-weight: 800;
   border-left: 4px solid #93a5ab;
+  padding: 10px;
 }
 
 .login input:focus {
