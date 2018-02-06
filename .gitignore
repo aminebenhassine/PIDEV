@@ -12,3 +12,4 @@
 !var/sessions/.gitkeep
 !var/SymfonyRequirements.php
 /.web-server-pid
+vendor/friendsofsymfony/user-bundle/
