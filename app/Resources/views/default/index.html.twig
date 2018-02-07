@@ -1,91 +1,203 @@
 <html>
 <style>
-* {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
+    .loginperso{
+        background-color: rgb(115, 16, 9);
+        padding: 4px !important;
+    }
+    .loginperso:hover a{
+        color: rgb(115, 16, 9) !important;
+        background-color: #fff !important;4
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
+    }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
+    .loginperso:hover{
+        color: rgb(115, 16, 9) !important;
+        background-color: #fff !important;4
+        padding: 4px !important;
+    }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+    .loginperso a{
+        color: white !important;
 
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+    }
+    .singup:hover a{
+        color: #0077b5 !important;
 
-.active {
-  background-color: #717171;
-}
+    }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+    .singup:hover{
+        color: #0077b5 !important;
+        background-color: #fff;
+        padding: 4px !important;
+    }
 
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
+    .singup{
+        margin-top:2px !important;
+        background-color: #0077b5;
+        padding: 4px !important;
+    }
+    .singup a{
+        color: white !important;
+    }
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
+    input#fos_user_registration_form_email::placeholder {
+        color:  red;
+        color:  grey;
+        font-weight:  400;
+        position: initial;
+        /* left: -29px; */
+        padding: -9px !important;
+        margin:  0px !important;
+    }
+    input::placeholder{
+        padding:12px !important;
+    }
+    
+    ::placeholder{
+        padding: 8px !important;
+
+    }
+    a.readmore {
+        float:  right;
+        border:  1px solid;
+        margin-top: 7px !important;
+        padding: 11px !important;
+
+    }
+
+    a.readmore:hover {
+        color:black !important;
+        background-color:white;
+        border:1px solid white !important;
+    }
+
+    * {box-sizing: border-box;}
+    body {font-family: Verdana, sans-serif;}
+    .mySlides {display: none;}
+    img {vertical-align: middle;}
+
+    .col-md-6.sre {
+        /* height:  85%; */
+    }.col-md-6.sre1 {
+         height: 313px;
+         background-color:  red;
+         margin-bottom: 26px !important;
+         padding-bottom: 25px !important;
+     }
+
+    .col-md-6.bottomgridimg {
+        padding:  0px;
+    }
+
+    .col-md-6.bottomgridtext.seifperso2 {
+        height:  338px;
+    }.col-md-6.bottomgridtext.seifperso2 {}
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active {
+        background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+        .text {font-size: 11px}
+    }
+    /* Adding CSS manually is only necessary in JSFiddle,
+    where CSS can't be inserted into the <head> */
+    .typed-cursor{
+        opacity: 1;
+        animation: typedjsBlink 0.7s infinite;
+        -webkit-animation: typedjsBlink 0.7s infinite;
+        animation: typedjsBlink 0.7s infinite;
+    }
+    @keyframes typedjsBlink{
+        50% { opacity: 0.0; }
+    }
+    @-webkit-keyframes typedjsBlink{
+        0% { opacity: 1; }
+        50% { opacity: 0.0; }
+        100% { opacity: 1; }
+    }
+    .typed-fade-out{
+        opacity: 0;
+        transition: opacity .25s;
+        -webkit-animation: 0;
+        animation: 0;
+    }
 </style>
 <head>
     {% block head %}
 
-        {% block meta %}
-            <meta charset="utf-8" />
-        {% endblock %}
+    {% block meta %}
+    <meta charset="utf-8" />
+    {% endblock %}
 
         <title>{% block title %}Espace Etudiant {% endblock %} </title>
 
-        {% block style %}
-            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/lightbox.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/flexslider.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    {% block style %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/lightbox.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/flexslider.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+
+
         <style>
             .middlebarmenu {
                 vertical-align: middle;
@@ -162,9 +274,9 @@ img {vertical-align: middle;}
             /* Demo purposes only */
 
         </style>
-        {% endblock %}
+    {% endblock %}
 
-        {% block script %}
+    {% block script %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="{{ asset('js/uisearch.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/SmoothScroll.min.js') }}"></script>
@@ -178,8 +290,8 @@ img {vertical-align: middle;}
         <script type="text/javascript" src="{{ asset('js/classie.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>
 
-    <script>
-    </script>
+        <script>
+        </script>
 
 
 
@@ -196,19 +308,29 @@ img {vertical-align: middle;}
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="col-md-2">
-                    <img src="{{ asset("images/abcd.png") }}">
+                    <img src="{{ asset('images/abcd.png') }}">
                 </div>
                 <div class="col-md-8 middlebarmenu">
                     <ul class="snip1189">
                         <li class="current"><a href="#">Home</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Club</a></li>
-                        <li><a href="#">Docs</a></li>
-                        <li><a href="#">Spotted</a></li>
+                        <li><a href="{{ path('_annonces') }}">Annonces</a></li>
+                        <li><a href="{{ path('_events') }}">Events</a></li>
+                        <li><a href="{{ path('_club') }}">Club</a></li>
+                        <li><a href="{{ path('_docs') }}">Docs</a></li>
+                        <li><a href="{{ path('_spotted') }}">Spotted</a></li>
 
                     </ul>
                 </div>
-                <div class="col-md-2">c</div>
+                <div class="col-md-2">
+                    <ul class="snip1189" style="padding-top: 12px !important;">
+                        <li class="loginperso"><a href="login">Login</a></li>
+                        <li class="singup"><a href="register">Register</a></li>
+
+
+                    </ul>
+
+
+                </div>
             </div>
         </nav>
 
@@ -234,6 +356,11 @@ img {vertical-align: middle;}
                                         <ul class="slides" style="width: 1000%; transition-duration: 0s; transform: translate3d(-1140px, 0px, 0px);">
                                             <li class="clone" style="width: 1140px; float: left; display: block;">
                                                 <div class="w3l-info">
+                                                    <div id="typed-strings">
+                                                        <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+                                                        <p>It <em>types</em> out sentences.</p>
+                                                    </div>
+                                                    <span id="typed"></span>
                                                     <h3>Because you care...</h3>
                                                     <div class="col-md-4">
                                                         <div class="grid1">
@@ -262,22 +389,22 @@ img {vertical-align: middle;}
                                                     <div class="col-md-4">
                                                         <div class="grid1">
                                                             <i aria-hidden="true" class="fa fa-graduation-cap"></i>
-                                                            
+
                                                             <p>Dernières offres de Collocation</p>
-                                                            
+
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="grid1">
                                                             <i aria-hidden="true" class="fa fa-pencil"></i>
-                                                            
+
                                                             <p>Derniers Objets perdus</p>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <div class="grid1">
                                                             <i aria-hidden="true" class="fa fa-book"></i>
-                                                            
+
                                                             <p>Derniers évènements</p>
                                                         </div>
                                                     </div>
@@ -338,7 +465,7 @@ img {vertical-align: middle;}
     {% block section2 %}
         <div class="about" id="about">
             <div class="container">
-                <div class="about-head text-center ">
+                 <div class="about-head text-center ">
                     <h3>Les plus d'Esprit Entr'aide</h3>
                 </div>
                 <div class="about-top-grids">
@@ -359,136 +486,83 @@ img {vertical-align: middle;}
                         <h3>Un coin spotted</h3>
                     </div>
                     <div class="clearfix"></div>
-</div>
-            <div class="about-bottom-grid1">
-                <div class="col-md-6 bottomgridtext">
-                    <h3>Clubs ESPRIT</h3>
-                    <p>Au sein d’Esprit, les associations et clubs remplissent plusieurs rôles étant donné la diversité des motivations qui animent ceux qui en sont à l’origine. Conscients de l’importance de la vie associative, les étudiants jouent un rôle important dans l’élaboration et la transmission des messages aux destinataires.</p>
-                    <div class="menuimage">
-                        <a class="readmore" data-target="#myModal1" data-toggle="modal" href="#">Read More<i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
+</div>>
+                <div class="about-bottom-grid1">
+                    <div class="col-md-6 bottomgridtext seifperso2">
+                        <h3>Annonces</h3>
+                        <p> Vous cherchez un objet que vous avez perdu ou le propriétaire d'un objet que vos avez trouvé? Vous avez besoin d'un covoiturage ou d'une colocation? Ou peut-être cherchez vous un stage ? Quoi qui vous intrigue, et quelque soit ce que vous cherchez, ne cherchez pas trop, vous êtes à la bonne adresse, dans votre espace de partage de vos annonces</p>
+
+                        <div class="readmore-w3">
+                            <a class="readmore" href="{{ path('_annonces') }}">Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
                     </div>
+                    <div class="col-md-6 bottomgridimg">
+                        <img src="{{ asset('images/about1.jpg') }}"alt="">
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-                
-    <div class="col-md-6 bottomgridimg">
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <div class="numbertext">
-                    1 / 3
-                </div><img src="/pidev/web/images/photoclubesprit/c1.jpg" style="width:100%">
-                <div class="text">
-                    Caption Text
+                <div class="about-bottom-grid2">
+                    <div class="col-md-6 bottomgridimg">
+                        <img src="{{ asset('images/about2.jpg') }}"alt="">
+                    </div>
+                    <div class="col-md-6 bottomgridtext bottomleft seifperso2">
+
+                        <h3>Evénements et Challenges</h3>
+                        <p>Etre étudiant c’est aussi partager des moments conviviaux et festifs au sein de la communauté Espritienne. Chaque semaine, une pléiade d’événements (musicaux, écologiques etc) est organisée par les étudiants et leurs enseignants pour enrichir l’atmosphère de l’école et continuer de rayonner tant sur l’aspect académique que sur l’aspect culturel.</p>
+
+                        <div class="readmore-w3">
+                            <a class="readmore" href="{{ path('_events') }}">Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">
-                    2 / 3
-                </div><img src="/pidev/web/images/photoclubesprit/c8.jpg" style="width:100%">
-                <div class="text">
-                    Caption Two
+
+
+                <div class="about-bottom-grid3">
+                    <div class="col-md-6 bottomgridtext seifperso2">
+                        <h3>Spotted</h3>
+                        <p>Spotted est ta machine à rencontrer des gens/remonter le temps! C'est un moyen simple et amusant de se connecter avec les gens que tu as rencontrés à esprit. Rencontre de nouvelles personnes sur le campus. Avec Spotted, tu peux écrire aux gens que tu croises dans ton quotidien ou leur laisser un post anonyme pour les retrouver</p>.
+
+
+                        <div class="readmore-w3">
+                            <a class="readmore"  href="{{ path('_spotted') }}">Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 bottomgridimg">
+                        <img src="{{ asset('images/about1.jpg') }}"alt="">
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">
-                    3 / 3
-                </div><img src="/pidev/web/images/photoclubesprit/c11.jpg" style="width:100%">
-                <div class="text">
-                    Caption Three
+                <div class="about-bottom-grid2">
+                    <div class="col-md-6 bottomgridimg">
+                        <img src="{{ asset('images/about2.jpg') }}"alt="">
+                    </div>
+                    <div class="col-md-6 bottomgridtext bottomleft seifperso2">
+                        <h3>Lancez vos impressions à distance !</h3>
+                        <p>Notre service <b>Impression</b> vous permet de lancer vos impressions depuis n’importe quel appareil connecté (Ordinateur, Tablette, Mobile...). Il vous suffit ensuite de passer en boutique pour récupérer vos documents !</p>
+
+                        <div class="readmore-w3">
+                            <a class="readmore"  href="{{ path('_docs') }}" >Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="about-bottom-grid2">
+                    <div class="col-md-6 bottomgridtext seifperso2">
+                        <h3>Clubs ESPRIT</h3>
+                        <p>Au sein d’Esprit, les associations et clubs remplissent plusieurs rôles étant donné la diversité des motivations qui animent ceux qui en sont à l’origine. Conscients de l’importance de la vie associative, les étudiants jouent un rôle important dans l’élaboration et la transmission des messages aux destinataires.</p>
+
+                        <div class="readmore-w3">
+                            <a class="readmore"  href="{{ path('_club') }}" >Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 bottomgridimg">
+                        <img src="{{ asset('images/about1.jpg') }}"alt="">
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
             </div>
         </div>
-    </div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-</div>
-
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
-
-
-
-
-
-                
-
-
-
-
-
-                <div class="clearfix"></div>
-            </div>
-            <div class="about-bottom-grid2">
-                <div class="col-md-6 bottomgridimg"><img alt="" src="/pidev/web/images/about2.jpg"></div>
-                <div class="col-md-6 bottomgridtext bottomleft">
-                    <h3>Evénements et Challenges</h3>
-                    <p>Etre étudiant c’est aussi partager des moments conviviaux et festifs au sein de la communauté Espritienne. Chaque semaine, une pléiade d’événements (musicaux, écologiques etc) est organisée par les étudiants et leurs enseignants pour enrichir l’atmosphère de l’école et continuer de rayonner tant sur l’aspect académique que sur l’aspect culturel.</p>
-                    <div class="readmore-w3">
-                        <a class="readmore" data-target="#myModal1" data-toggle="modal" href="#">Read More<i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="about-bottom-grid1">
-                <div class="col-md-6 bottomgridtext">
-                    <h3>Spotted</h3>
-                    <p>Spotted est ta machine à rencontrer des gens/remonter le temps! C'est un moyen simple et amusant de se connecter avec les gens que tu as rencontrés à esprit. Rencontre de nouvelles personnes sur le campus. Avec Spotted, tu peux écrire aux gens que tu croises dans ton quotidien ou leur laisser un post anonyme pour les retrouver.</p>
-                    <div class="readmore-w3">
-                        <a class="readmore" data-target="#myModal1" data-toggle="modal" href="#">Read More<i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 bottomgridimg"><img alt="" src="/pidev/web/images/about1.jpg"></div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="about-bottom-grid2">
-                <div class="col-md-6 bottomgridimg"><img alt="" src="/pidev/web/images/about2.jpg"></div>
-                <div class="col-md-6 bottomgridtext bottomleft">
-                    <h3>Lancez vos impressions à distance !</h3>
-                    <p>Notre service <b>Impression</b> vous permet de lancer vos impressions depuis n’importe quel appareil connecté (Ordinateur, Tablette, Mobile...). Il vous suffit ensuite de passer en boutique pour récupérer vos documents !</p>
-                    <div class="readmore-w3">
-                        <a class="readmore" data-target="#myModal1" data-toggle="modal" href="#">Read More<i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="about-bottom-grid1">
-                <div class="col-md-6 bottomgridtext">
-                    <h3>Annonce</h3>
-                    <p>C'est un Service internet gratuit et social pour retrouver ou déclarer objets perdus, trouvés, volés. Que vous ayez perdu, trouvé ou fait volé votre Pc, chargeur, clés, lunettes,  iPhone, portable, portefeuille ... ENSEMBLE, nous allons essayer de vous aider en partageant vos annonces sur notre Site.</p>
-                    <div class="readmore-w3">
-                        <a class="readmore" data-target="#myModal1" data-toggle="modal" href="#">Read More<i aria-hidden="true" class="fa fa-long-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 bottomgridimg"><img alt="" src="/pidev/web/images/about1.jpg"></div>
-                <div class="clearfix"></div>
-            </div>
-
-        </div>
-    </div>
-
-
     {% endblock %}
 </div>
 
@@ -622,63 +696,63 @@ function showSlides() {
                 </div>
                 <div class="gallery-info">
                     <div class="col-md-3 gallery-grids">
-                        <a href="images/p1.jpg") }} class="gallery-box" data-lightbox="example-set" data-title="">
-                        <img src="{{ asset("images/p1.jpg") }}" alt="" class="img-responsive zoom-img">
+                        <a href="images/p1.jpg') }} class="gallery-box" data-lightbox="example-set" data-title="">
+                            <img src="{{ asset('images/p1.jpg') }}" alt="" class="img-responsive zoom-img">
                         </a>
                     </div>
                     <div class="col-md-3 gallery-grids">
-                        <a href="images/p2.jpg") }}" class="gallery-box" data-lightbox="example-set" data-title="">
-                        <img src="{{ asset("images/p2.jpg") }}" alt="" class="img-responsive zoom-img">
+                        <a href="images/p2.jpg') }}" class="gallery-box" data-lightbox="example-set" data-title="">
+                        <img src="{{ asset('images/p2.jpg') }}" alt="" class="img-responsive zoom-img">
                         </a>
                     </div>
                     <div class="col-md-3 gallery-grids">
-                        <a href="images/p3.jpg") }}" class="gallery-box" data-lightbox="example-set" data-title="">
-                        <img src="{{ asset("images/p3.jpg") }}" alt="" class="img-responsive zoom-img">
+                        <a href="images/p3.jpg') }}" class="gallery-box" data-lightbox="example-set" data-title="">
+                        <img src="{{ asset('images/p3.jpg') }}" alt="" class="img-responsive zoom-img">
                         </a>
                     </div>
                     <div class="col-md-3 gallery-grids">
-                        <a href="images/p4.jpg") }}" class="gallery-box" data-lightbox="example-set" data-title="">
-                        <img src="{{ asset("images/p4.jpg") }}" alt="" class="img-responsive zoom-img">
+                        <a href="images/p4.jpg') }}" class="gallery-box" data-lightbox="example-set" data-title="">
+                        <img src="{{ asset('images/p4.jpg') }}" alt="" class="img-responsive zoom-img">
                         </a>
                     </div>
                     <div class="col-md-3 gallery-grids">
-                        <a href="images/p5.jpg") }}" class="gallery-box" data-lightbox="example-set" data-title="">
-                        <img src="{{ asset("images/p5.jpg") }}" alt="" class="img-responsive zoom-img">
+                        <a href="images/p5.jpg') }}" class="gallery-box" data-lightbox="example-set" data-title="">
+                        <img src="{{ asset('images/p5.jpg') }}" alt="" class="img-responsive zoom-img">
                         </a>
                     </div>
                     <div class="col-md-3 gallery-grids">
-                        <a href="images/p6.jpg") }}" class="gallery-box" data-lightbox="example-set" data-title="">
-                        <img src="{{ asset("images/p6.jpg") }}" alt="" class="img-responsive zoom-img">
+                        <a href="images/p6.jpg') }}" class="gallery-box" data-lightbox="example-set" data-title="">
+                        <img src="{{ asset('images/p6.jpg') }}" alt="" class="img-responsive zoom-img">
                         </a>
                     </div>
                     <div class="col-md-3 gallery-grids">
-                        <a href="images/p7.jpg") }}" class="gallery-box" data-lightbox="example-set" data-title="">
-                        <img src="{{ asset("images/p7.jpg") }}" alt="" class="img-responsive zoom-img">
+                        <a href="images/p7.jpg') }}" class="gallery-box" data-lightbox="example-set" data-title="">
+                        <img src="{{ asset('images/p7.jpg') }}" alt="" class="img-responsive zoom-img">
                         </a>
                     </div>
                     <div class="col-md-3 gallery-grids">
-                        <a href="images/p8.jpg") }}" class="gallery-box" data-lightbox="example-set" data-title="">
-                        <img src="{{ asset("images/p8.jpg") }}" alt="" class="img-responsive zoom-img">
+                        <a href="images/p8.jpg') }}" class="gallery-box" data-lightbox="example-set" data-title="">
+                        <img src="{{ asset('images/p8.jpg') }}" alt="" class="img-responsive zoom-img">
                         </a>
                     </div>
                     <div class="col-md-3 gallery-grids">
-                        <a href="images/p9.jpg") }}" class="gallery-box" data-lightbox="example-set" data-title="">
-                        <img src="{{ asset("images/p9.jpg") }}" alt="" class="img-responsive zoom-img">
+                        <a href="images/p9.jpg') }}" class="gallery-box" data-lightbox="example-set" data-title="">
+                        <img src="{{ asset('images/p9.jpg') }}" alt="" class="img-responsive zoom-img">
                         </a>
                     </div>
                     <div class="col-md-3 gallery-grids">
-                        <a href="images/p10.jpg") }}" class="gallery-box" data-lightbox="example-set" data-title="">
-                        <img src="{{ asset("images/p10.jpg") }}" alt="" class="img-responsive zoom-img">
+                        <a href="images/p10.jpg') }}" class="gallery-box" data-lightbox="example-set" data-title="">
+                        <img src="{{ asset('images/p10.jpg') }}" alt="" class="img-responsive zoom-img">
                         </a>
                     </div>
                     <div class="col-md-3 gallery-grids">
-                        <a href="images/p11.jpg") }}" class="gallery-box" data-lightbox="example-set" data-title="">
-                        <img src="{{ asset("images/p11.jpg") }}" alt="" class="img-responsive zoom-img">
+                        <a href="images/p11.jpg') }}" class="gallery-box" data-lightbox="example-set" data-title="">
+                        <img src="{{ asset('images/p11.jpg') }}" alt="" class="img-responsive zoom-img">
                         </a>
                     </div>
                     <div class="col-md-3 gallery-grids">
-                        <a href="images/p12.jpg") }}" class="gallery-box" data-lightbox="example-set" data-title="">
-                        <img src="{{ asset("images/p12.jpg") }}" alt="" class="img-responsive zoom-img">
+                        <a href="images/p12.jpg') }}" class="gallery-box" data-lightbox="example-set" data-title="">
+                        <img src="{{ asset('images/p12.jpg') }}" alt="" class="img-responsive zoom-img">
                         </a>
                     </div>
                     <div class="clearfix"> </div>

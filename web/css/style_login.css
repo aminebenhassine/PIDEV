@@ -111,7 +111,7 @@ body.login {
 .login input[type="email"],
 .login input[type="password"],
 .login input:focus {
-  background-color: rgba(40, 52, 67, 0.75);
+  background-color:rgb(255, 255, 255) !important;
   border: 1px solid #4a525f;
   color: #3a3a3a;
   font-weight: 800;

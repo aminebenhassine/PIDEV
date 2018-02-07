@@ -5,6 +5,13 @@ _test:
     path:     /test
     defaults: { _controller: AppBundle:Default:test }
 
+
+_annonces:
+    path:     /annonce
+    defaults: { _controller: AppBundle:Default:annonce }
+
+
+
 _club:
     path:     /club
     defaults: { _controller: AppBundle:Default:club }

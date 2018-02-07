@@ -24,6 +24,12 @@ class DefaultController extends AbstractController
         return $this->render('default/parenttest.html.twig');
 
     }
+    public function annonceAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('version0/annonce.html.twig');
+
+    }
 
 
     public function clubAction(Request $request)
