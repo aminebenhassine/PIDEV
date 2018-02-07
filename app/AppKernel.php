@@ -18,7 +18,12 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new EspritEntreAide\UserBundle\UserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-
+            new EspritEntreAide\DemoBundle\DemoBundle(),
+            new EspritEntreAide\AnnonceBundle\AnnonceBundle(),
+            new EspritEntreAide\EvenementBundle\EvenementBundle(),
+            new EspritEntreAide\ClubBundle\ClubBundle(),
+            new EspritEntreAide\StoreBundle\StoreBundle(),
+            new EspritEntreAide\SpottedBundle\SpottedBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

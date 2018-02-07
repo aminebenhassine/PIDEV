@@ -1,0 +1,3 @@
+spotted_homepage:
+    path:     /
+    defaults: { _controller: SpottedBundle:Default:index }
