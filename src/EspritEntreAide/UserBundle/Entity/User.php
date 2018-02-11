@@ -42,6 +42,7 @@ class User extends BaseUser
 
 
 
+
     public function getId()
     {
         return $this->id;
@@ -54,8 +55,6 @@ class User extends BaseUser
     {
         return $this->cin;
     }
-
-
 
     /**
      * @return string
