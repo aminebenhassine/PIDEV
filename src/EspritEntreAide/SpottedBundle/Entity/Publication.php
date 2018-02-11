@@ -50,10 +50,8 @@ class Publication
     private $categorieP;
 
     /**
-     * @var int
      * @ORM\ManyToOne(targetEntity="EspritEntreAide\UserBundle\Entity\User")
-     * @ORM\JoinColumn(referencedColumnName="id")
-     * @ORM\Column(name="id_user", type="integer", nullable=true)
+     * @ORM\JoinColumn(name="id_user",referencedColumnName="id")
      */
     private $idUser;
 

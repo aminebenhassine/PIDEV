@@ -22,18 +22,14 @@ class Commentaire
     private $id;
 
     /**
-     * @var int
      * @ORM\ManyToOne(targetEntity="EspritEntreAide\UserBundle\Entity\User")
-     * @ORM\JoinColumn(referencedColumnName="id")
-     * @ORM\Column(name="id_user", type="integer", nullable=true)
+     * @ORM\JoinColumn(name="id_user",referencedColumnName="id")
      */
     private $idUser;
 
     /**
-     * @var int
      * @ORM\ManyToOne(targetEntity="EspritEntreAide\SpottedBundle\Entity\Publication")
-     * @ORM\JoinColumn(referencedColumnName="id")
-     * @ORM\Column(name="id_publication", type="integer", nullable=true)
+     * @ORM\JoinColumn(name="id_publication",referencedColumnName="id")
      */
     private $idPublication;
 
