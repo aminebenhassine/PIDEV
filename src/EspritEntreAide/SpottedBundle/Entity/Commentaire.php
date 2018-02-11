@@ -81,28 +81,21 @@ class Commentaire
     }
 
     /**
-     * Set idPublication
-     *
-     * @param integer $idPublication
-     *
-     * @return Commentaire
-     */
-    public function setIdPublication($idPublication)
-    {
-        $this->idPublication = $idPublication;
-
-        return $this;
-    }
-
-    /**
-     * Get idPublication
-     *
-     * @return int
+     * @return mixed
      */
     public function getIdPublication()
     {
         return $this->idPublication;
     }
+
+    /**
+     * @param mixed $idPublication
+     */
+    public function setIdPublication($idPublication)
+    {
+        $this->idPublication = $idPublication;
+    }
+
 
     /**
      * @return \DateTime

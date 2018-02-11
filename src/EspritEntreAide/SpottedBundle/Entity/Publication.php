@@ -63,11 +63,28 @@ class Publication
     private $note;
 
     /**
-     * @var int
+     * @ORM\OneToMany(targetEntity="EspritEntreAide\SpottedBundle\Entity\Commentaire", mappedBy="idPublication")
      *
-     * @ORM\Column(name="id_commentaire", type="integer", nullable=true)
      */
-    private $idCommentaire;
+    private $commentaires;
+
+    /**
+     * @return mixed
+     */
+    public function getCommentaires()
+    {
+        return $this->commentaires;
+    }
+
+    /**
+     * @param mixed $commentaires
+     */
+    public function setCommentaires($commentaires)
+    {
+        $this->commentaires = $commentaires;
+    }
+
+
 
     /**
      * @var \DateTime
@@ -229,30 +246,6 @@ class Publication
     public function getNote()
     {
         return $this->note;
-    }
-
-    /**
-     * Set idCommentaire
-     *
-     * @param integer $idCommentaire
-     *
-     * @return Publication
-     */
-    public function setIdCommentaire($idCommentaire)
-    {
-        $this->idCommentaire = $idCommentaire;
-
-        return $this;
-    }
-
-    /**
-     * Get idCommentaire
-     *
-     * @return int
-     */
-    public function getIdCommentaire()
-    {
-        return $this->idCommentaire;
     }
 
     /**

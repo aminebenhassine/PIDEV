@@ -22,18 +22,14 @@ class Reponse
     private $id;
 
     /**
-     * @var int
      * @ORM\ManyToOne(targetEntity="EspritEntreAide\UserBundle\Entity\User")
-     * @ORM\JoinColumn(referencedColumnName="id")
-     * @ORM\Column(name="id_user", type="integer", nullable=true)
+     * @ORM\JoinColumn(name="id_user",referencedColumnName="id")
      */
     private $idUser;
 
     /**
-     * @var int
      * @ORM\ManyToOne(targetEntity="EspritEntreAide\AnnonceBundle\Entity\Annonce")
-     * @ORM\JoinColumn(referencedColumnName="id")
-     * @ORM\Column(name="id_annonce", type="integer", nullable=true)
+     * @ORM\JoinColumn(name="id_annonce",referencedColumnName="id")
      */
     private $idAnnonce;
 
@@ -70,23 +66,7 @@ class Reponse
     }
 
     /**
-     * Set idUser
-     *
-     * @param integer $idUser
-     *
-     * @return Reponse
-     */
-    public function setIdUser($idUser)
-    {
-        $this->idUser = $idUser;
-
-        return $this;
-    }
-
-    /**
-     * Get idUser
-     *
-     * @return int
+     * @return mixed
      */
     public function getIdUser()
     {
@@ -94,28 +74,30 @@ class Reponse
     }
 
     /**
-     * Set idAnnonce
-     *
-     * @param integer $idAnnonce
-     *
-     * @return Reponse
+     * @param mixed $idUser
      */
-    public function setIdAnnonce($idAnnonce)
+    public function setIdUser($idUser)
     {
-        $this->idAnnonce = $idAnnonce;
-
-        return $this;
+        $this->idUser = $idUser;
     }
 
     /**
-     * Get idAnnonce
-     *
-     * @return int
+     * @return mixed
      */
     public function getIdAnnonce()
     {
         return $this->idAnnonce;
     }
+
+    /**
+     * @param mixed $idAnnonce
+     */
+    public function setIdAnnonce($idAnnonce)
+    {
+        $this->idAnnonce = $idAnnonce;
+    }
+
+
 
     /**
      * Set contenu

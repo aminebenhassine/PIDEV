@@ -50,10 +50,8 @@ class Annonce
     private $categorieA;
 
     /**
-     * @var int
      * @ORM\ManyToOne(targetEntity="EspritEntreAide\UserBundle\Entity\User")
-     * @ORM\JoinColumn(referencedColumnName="id")
-     * @ORM\Column(name="id_user", type="integer")
+     * @ORM\JoinColumn(name="id_user",referencedColumnName="id")
      */
     private $idUser;
 
@@ -77,6 +75,29 @@ class Annonce
      * @ORM\Column(name="date_modif", type="date", nullable=true)
      */
     private $dateModif;
+
+    /**
+     * @ORM\OneToMany(targetEntity="EspritEntreAide\StoreBundle\Entity\Document", mappedBy="id_annonce")
+     *
+     */
+    private $documents;
+
+    /**
+     * @return mixed
+     */
+    public function getDocuments()
+    {
+        return $this->documents;
+    }
+
+    /**
+     * @param mixed $documents
+     */
+    public function setDocuments($documents)
+    {
+        $this->documents = $documents;
+    }
+
 
 
     /**
@@ -126,6 +147,9 @@ class Annonce
 
         return $this;
     }
+
+
+
 
     /**
      * Get descA
@@ -178,29 +202,6 @@ class Annonce
         return $this->dateA;
     }
 
-    /**
-     * Set idUser
-     *
-     * @param integer $idUser
-     *
-     * @return Annonce
-     */
-    public function setIdUser($idUser)
-    {
-        $this->idUser = $idUser;
-
-        return $this;
-    }
-
-    /**
-     * Get idUser
-     *
-     * @return int
-     */
-    public function getIdUser()
-    {
-        return $this->idUser;
-    }
 
     /**
      * Set numTel
@@ -227,28 +228,38 @@ class Annonce
     }
 
     /**
-     * Set idRep
-     *
-     * @param integer $idRep
-     *
-     * @return Annonce
+     * @return mixed
      */
-    public function setIdRep($idRep)
+    public function getIdUser()
     {
-        $this->idRep = $idRep;
-
-        return $this;
+        return $this->idUser;
     }
 
     /**
-     * Get idRep
-     *
+     * @param mixed $idUser
+     */
+    public function setIdUser($idUser)
+    {
+        $this->idUser = $idUser;
+    }
+
+    /**
      * @return int
      */
     public function getIdRep()
     {
         return $this->idRep;
     }
+
+    /**
+     * @param int $idRep
+     */
+    public function setIdRep($idRep)
+    {
+        $this->idRep = $idRep;
+    }
+
+
 
     /**
      * Set dateModif

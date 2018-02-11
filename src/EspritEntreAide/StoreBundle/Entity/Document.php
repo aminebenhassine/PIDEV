@@ -49,6 +49,11 @@ class Document
      */
     private $dateUpload;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="EspritEntreAide\AnnonceBundle\Entity\Annonce", inversedBy="documents")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $id_annonce;
 
     /**
      * Get id
@@ -83,6 +88,23 @@ class Document
     {
         return $this->nomDoc;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getIdAnnonce()
+    {
+        return $this->id_annonce;
+    }
+
+    /**
+     * @param mixed $id_annonce
+     */
+    public function setIdAnnonce($id_annonce)
+    {
+        $this->id_annonce = $id_annonce;
+    }
+
 
     /**
      * Set source

@@ -49,7 +49,6 @@ class Club
     private $idUser;
 
 
-
     /**
      * @var string
      *
