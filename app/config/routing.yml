@@ -36,7 +36,9 @@ _admin:
     path:     /admin
     defaults: { _controller: AppBundle:Default:admin }
 
-
+club_ajout:
+    path:     /ajout
+    defaults: { _controller: ClubBundle:gererclub:Ajout }
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
