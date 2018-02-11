@@ -32,7 +32,6 @@ class User extends BaseUser
      */
     private $nom ;
 
-
     /**
      * @var string
      *
