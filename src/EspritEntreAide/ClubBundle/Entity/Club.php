@@ -43,12 +43,16 @@ class Club
     private $dateCreation;
 
     /**
-     * @var int
      * @ORM\OneToOne(targetEntity="EspritEntreAide\UserBundle\Entity\User")
-     * @ORM\JoinColumn(referencedColumnName="id")
-     * @ORM\Column(name="id_user", type="integer", nullable=true)
+     * @ORM\JoinColumn(name="id_user",referencedColumnName="id")
      */
     private $idUser;
+
+    /**
+     * @ORM\OneToMany(targetEntity="EspritEntreAide\UserBundle\Entity\User")
+     * @ORM\JoinColumn(name="id_membre",referencedColumnName="id")
+     */
+    private $idMembre;
 
     /**
      * @var string
@@ -116,6 +120,23 @@ class Club
         return $this->mailC;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getIdMembre()
+    {
+        return $this->idMembre;
+    }
+
+    /**
+     * @param mixed $idMembre
+     */
+    public function setIdMembre($idMembre)
+    {
+        $this->idMembre = $idMembre;
+    }
+
+    
     /**
      * Set dateCreation
      *

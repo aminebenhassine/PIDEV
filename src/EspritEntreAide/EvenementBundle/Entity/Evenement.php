@@ -50,18 +50,14 @@ class Evenement
     private $categorie;
 
     /**
-     * @var int
      * @ORM\OneToOne(targetEntity="EspritEntreAide\UserBundle\Entity\User")
-     * @ORM\JoinColumn(referencedColumnName="id")
-     * @ORM\Column(name="id_user", type="integer", nullable=true)
+     * @ORM\JoinColumn(name="id_user",referencedColumnName="id")
      */
     private $idUser;
 
     /**
-     * @var int
      * @ORM\OneToOne(targetEntity="EspritEntreAide\ClubBundle\Entity\Club")
-     * @ORM\JoinColumn(referencedColumnName="id")
-     * @ORM\Column(name="id_club", type="integer", nullable=true)
+     * @ORM\JoinColumn(name="id_club",referencedColumnName="id")
      */
     private $idClub;
 

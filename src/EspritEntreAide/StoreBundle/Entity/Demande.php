@@ -22,18 +22,14 @@ class Demande
     private $id;
 
     /**
-     * @var int
      * @ORM\ManyToOne(targetEntity="EspritEntreAide\UserBundle\Entity\User")
-     * @ORM\JoinColumn(referencedColumnName="id")
-     * @ORM\Column(name="id_user", type="integer", nullable=true)
+     * @ORM\JoinColumn(name="id_user",referencedColumnName="id")
      */
     private $idUser;
 
     /**
-     * @var int
      * @ORM\ManyToOne(targetEntity="EspritEntreAide\StoreBundle\Entity\Store")
-     * @ORM\JoinColumn(referencedColumnName="id")
-     * @ORM\Column(name="id_store", type="integer", nullable=true)
+     * @ORM\JoinColumn(name="id_store",referencedColumnName="id")
      */
     private $idStore;
 
