@@ -42,30 +42,11 @@ class User extends BaseUser
 
 
     /**
-     * Many Users have Many Groups.
-     * @ORM\ManyToMany(targetEntity="EspritEntreAide\ClubBundle\Entity\Club")
-     * @ORM\JoinTable(name="membres_clubs",
-     *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
-     *      inverseJoinColumns={@ORM\JoinColumn(name="club_id", referencedColumnName="id")}
-     *      )
+     * @var string
+     *
+     * @ORM\Column(name="user_role", type="string", length=255)
      */
-    private $club;
-
-    /**
-     * @return mixed
-     */
-    public function getClub()
-    {
-        return $this->club;
-    }
-
-    /**
-     * @param mixed $club
-     */
-    public function setClub($club)
-    {
-        $this->club = $club;
-    }
+    private $user_role ;
 
 
     public function getId()
@@ -79,6 +60,22 @@ class User extends BaseUser
     public function getCin()
     {
         return $this->cin;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUserRole()
+    {
+        return $this->user_role;
+    }
+
+    /**
+     * @param string $user_role
+     */
+    public function setUserRole($user_role)
+    {
+        $this->user_role = $user_role;
     }
 
     /**

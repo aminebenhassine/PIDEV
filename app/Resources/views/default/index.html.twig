@@ -1,5 +1,16 @@
 <html>
 <style>
+    .headertop {
+        background-color: #383838;
+        color: white;
+        vertical-align: middle;
+        height: 39px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    .headertop ul li {
+        display: inline-flex;
+    }
     .loginperso{
         background-color: rgb(115, 16, 9);
         padding: 4px !important;
@@ -301,7 +312,16 @@
 
     {% endblock %}
 </head>
-
+<div class="headertop">
+    <ul>
+        <li>
+            Item 1
+        </li>
+        <li>
+            Item 2
+        </li>
+    </ul>
+</div>
 
 <div class="section-header">
     {% block header %}
@@ -322,11 +342,19 @@
                     </ul>
                 </div>
                 <div class="col-md-2">
+
                     <ul class="snip1189" style="padding-top: 12px !important;">
-                        <li class="loginperso"><a href="login">Login</a></li>
-                        <li class="singup"><a href="register">Register</a></li>
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                            {{ app.user.username }}
+                            <li class="loginperso"><a href="logout">Logout</a></li>
+                        {% endif %}
 
 
+                        {% if  is_granted('IS_AUTHENTICATED_FULLY') == false %}
+
+                            <li class="loginperso"><a href="login">Login</a></li>
+                            <li class="singup"><a href="register">Register</a></li>
+                        {% endif %}
                     </ul>
 
 
