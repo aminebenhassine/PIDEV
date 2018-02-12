@@ -32,6 +32,7 @@ class User extends BaseUser
      */
     private $nom ;
 
+
     /**
      * @var string
      *
@@ -40,31 +41,6 @@ class User extends BaseUser
     private $prenom ;
 
 
-    /**
-     * Many Users have Many Groups.
-     * @ORM\ManyToMany(targetEntity="EspritEntreAide\ClubBundle\Entity\Club")
-     * @ORM\JoinTable(name="membres_clubs",
-     *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
-     *      inverseJoinColumns={@ORM\JoinColumn(name="club_id", referencedColumnName="id")}
-     *      )
-     */
-    private $club;
-
-    /**
-     * @return mixed
-     */
-    public function getClub()
-    {
-        return $this->club;
-    }
-
-    /**
-     * @param mixed $club
-     */
-    public function setClub($club)
-    {
-        $this->club = $club;
-    }
 
 
     public function getId()
@@ -79,6 +55,8 @@ class User extends BaseUser
     {
         return $this->cin;
     }
+
+
 
     /**
      * @return string
