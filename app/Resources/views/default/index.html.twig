@@ -312,16 +312,25 @@
 
     {% endblock %}
 </head>
+{% if (is_granted('ROLE_ENSEIGNANT')) or (is_granted('ROLE_ETUDIANT')) %}
+
 <div class="headertop">
     <ul>
-        <li>
-            Item 1
-        </li>
-        <li>
-            Item 2
-        </li>
+        {% if is_granted('ROLE_ENSEIGNANT') %}
+            <li>Gerer Docs</li>
+        {% elseif is_granted('ROLE_ETUDIANT')  %}
+            <li>Gerer Annonces</li>
+        {% elseif is_granted('ROLE_RESPOONSABLE_CLUB')  %}
+            <li>Gerer Clubs</li>
+        {% elseif is_granted('ROLE_RESPOONSABLE_STORE')  %}
+            <li>Gerer Demandes..</li>
+        {% else %}
+            inconnue
+        {% endif %}
+
     </ul>
 </div>
+{% endif %}
 
 <div class="section-header">
     {% block header %}

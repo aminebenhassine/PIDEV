@@ -69,6 +69,29 @@ class Evenement
     private $typeE;
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="etat", type="integer", nullable=true)
+     */
+    private $etat=0;
+
+    /**
+     * @return int
+     */
+    public function getEtat()
+    {
+        return $this->etat;
+    }
+
+    /**
+     * @param int $etat
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+    }
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="date_modif", type="date", nullable=true)
