@@ -33,6 +33,13 @@ class Commentaire
      */
     private $idPublication;
 
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="content_comm", type="string", length=255, nullable=true)
+     */
+    private $content_comm;
     /**
      * @var \DateTime
      *
@@ -127,6 +134,22 @@ class Commentaire
     public function setDateModif($dateModif)
     {
         $this->dateModif = $dateModif;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContentComm()
+    {
+        return $this->content_comm;
+    }
+
+    /**
+     * @param string $content_comm
+     */
+    public function setContentComm($content_comm)
+    {
+        $this->content_comm = $content_comm;
     }
 
 }

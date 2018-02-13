@@ -42,12 +42,6 @@ class Evenement
      */
     private $dateE;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="categorie", type="string", length=255, nullable=true)
-     */
-    private $categorie;
 
     /**
      * @ORM\OneToOne(targetEntity="EspritEntreAide\UserBundle\Entity\User")
@@ -60,6 +54,30 @@ class Evenement
      * @ORM\JoinColumn(name="id_club",referencedColumnName="id")
      */
     private $idClub;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="img_evt", nullable=true)
+     */
+    private $img_evt;
+
+    /**
+     * @return string
+     */
+    public function getImgEvt()
+    {
+        return $this->img_evt;
+    }
+
+    /**
+     * @param string $img_evt
+     */
+    public function setImgEvt($img_evt)
+    {
+        $this->img_evt = $img_evt;
+    }
+
 
     /**
      * @var string
@@ -179,30 +197,6 @@ class Evenement
     public function getDateE()
     {
         return $this->dateE;
-    }
-
-    /**
-     * Set categorie
-     *
-     * @param string $categorie
-     *
-     * @return Evenement
-     */
-    public function setCategorie($categorie)
-    {
-        $this->categorie = $categorie;
-
-        return $this;
-    }
-
-    /**
-     * Get categorie
-     *
-     * @return string
-     */
-    public function getCategorie()
-    {
-        return $this->categorie;
     }
 
     /**

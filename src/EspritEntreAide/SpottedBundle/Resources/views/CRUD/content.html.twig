@@ -1,0 +1,42 @@
+{% for m in listspotted %}
+
+<h1>{{ m.titreP }}</h1><br>
+<img width="88%" src="{{ asset('uploads/images/' ~ m.image) }}"/>
+content : <br>
+<blockquote>
+    {{ m.descP }}
+</blockquote>
+
+    {% endfor %}
+
+
+<div style="background-color: oldlace !important; height: 500px !important;border:2px solid black !important;">
+    {{ form_start(form) }}
+
+    {{ form_end(form) }}
+
+    <div style="padding: 20px !important; background-color: #C1CEC4 !important;">
+        <table border="1">
+            <tr>
+                <th>
+                    id
+                </th>
+
+
+            </tr>
+            {% for f in comments %}
+                <tr>
+                    <td>{{ f.contentComm }}</td>
+                    <td><a href="{{ path('_edit_comment_spotted',{'id':f.id}) }}">Modifier</a></td>
+                    <td><a href="{{ path('_delete_comment_spotted',{'id':f.id}) }}">Supprimer</a></td>
+
+
+
+                </tr>
+            {% else %}
+                <i>There is no comments here...</i>
+            {% endfor %}
+        </table>
+
+    </div>
+</div>

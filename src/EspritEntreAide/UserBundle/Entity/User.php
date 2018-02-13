@@ -21,7 +21,7 @@ class User extends BaseUser
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    protected $id;
+    public $id;
 
 
 
@@ -41,12 +41,6 @@ class User extends BaseUser
     private $prenom ;
 
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="user_role", type="string", length=255)
-     */
-    private $user_role ;
 
 
     public function getId()
@@ -62,21 +56,7 @@ class User extends BaseUser
         return $this->cin;
     }
 
-    /**
-     * @return string
-     */
-    public function getUserRole()
-    {
-        return $this->user_role;
-    }
 
-    /**
-     * @param string $user_role
-     */
-    public function setUserRole($user_role)
-    {
-        $this->user_role = $user_role;
-    }
 
     /**
      * @return string

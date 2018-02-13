@@ -1,1 +1,36 @@
-Hello World!
+{% extends ":default:test.html.twig" %}
+
+
+{% block title %}Club{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        .important { color: #336699; }
+
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="big-div-club">
+        <h1><b>Interface club</b></h1>
+    </div>
+    <center>
+        {% if (is_granted('ROLE_RESPONSABLE_SUPER_ADMIN'))
+        or(is_granted('ROLE_SUPER_ADMIN'))
+        or(is_granted('ROLE_ADMIN'))  %}
+        <li><a href="{{ path('club_ajout') }}"> Ajouter un club </a></li>
+        {% endif %}
+
+        <li><a href="{{ path('club_recherche') }}"> Rechercher un club </a></li>
+
+
+    </center>
+
+    <p class="important">
+
+    </p>
+{% endblock %}
+
+
+
+
+

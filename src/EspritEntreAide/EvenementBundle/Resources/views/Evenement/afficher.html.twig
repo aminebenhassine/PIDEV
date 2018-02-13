@@ -1,0 +1,43 @@
+{% extends ":default:test.html.twig" %}
+
+
+{% block title %}Evenements{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        .important { color: #336699; }
+
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="big-div">
+        <h1>Liste des évènements</h1>
+    </div>
+    <center>
+        <table border="2">
+            <tr>
+                <th> Image </th>
+                <th> Titre </th>
+                <th> Description </th>
+                <th> Date </th>
+                <th> Type </th>
+                <th> Club Organisateur </th>
+            </tr>
+            {% for evt in evts %}
+                <tr>
+                    <td> <img src="{{ asset(evt.imgEvt) }}"> </td>
+                    <td>{{ evt.titreE }}</td>
+                    <td>{{ evt.descE }}</td>
+                    <td>{{ evt.dateE | date('d-m-y H:i') }}</td>
+                    <td>{{ evt.typeE }}</td>
+                    <td>{{ evt.idClub.nomC }}</td>
+                    <td><A HREF="{{ path('_supprimer_events',{'id': evt.id }) }}" > Supprimer </A></td>
+                    <td><A HREF="{{ path('_modifier_events',{'id':evt.id }) }}" > Modifier </A></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </center>
+    <p class="important">
+
+    </p>
+{% endblock %}

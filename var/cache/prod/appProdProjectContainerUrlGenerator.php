@@ -1,0 +1,84 @@
+<?php
+
+use Symfony\Component\Routing\RequestContext;
+use Symfony\Component\Routing\Exception\RouteNotFoundException;
+use Psr\Log\LoggerInterface;
+
+/**
+ * appProdProjectContainerUrlGenerator
+ *
+ * This class has been auto-generated
+ * by the Symfony Routing Component.
+ */
+class appProdProjectContainerUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerator
+{
+    private static $declaredRoutes;
+
+    /**
+     * Constructor.
+     */
+    public function __construct(RequestContext $context, LoggerInterface $logger = null)
+    {
+        $this->context = $context;
+        $this->logger = $logger;
+        if (null === self::$declaredRoutes) {
+            self::$declaredRoutes = array(
+        'app' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'spotted_homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\SpottedBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/spotted_a/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_spotted_test' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\SpottedBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/spotted_a/spottedtest',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_ajout_spotted' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\SpottedBundle\\Controller\\DefaultController::ajoutAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/spotted_a/ajout_spotted',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_list_spotted' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\SpottedBundle\\Controller\\DefaultController::listSpottedAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/spotted_a/list',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_modifier_spotted' => array (  0 =>   array (    0 => 'id',  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\SpottedBundle\\Controller\\DefaultController::modifSpottedAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'id',    ),    1 =>     array (      0 => 'text',      1 => '/spotted_a/modif',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_delete_spotted' => array (  0 =>   array (    0 => 'id',  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\SpottedBundle\\Controller\\DefaultController::deleteSpottedAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'id',    ),    1 =>     array (      0 => 'text',      1 => '/spotted_a/supprimer',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_spotted_content' => array (  0 =>   array (    0 => 'id',  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\SpottedBundle\\Controller\\DefaultController::contentSpottedAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'id',    ),    1 =>     array (      0 => 'text',      1 => '/spotted_a/content',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_edit_comment_spotted' => array (  0 =>   array (    0 => 'id',  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\SpottedBundle\\Controller\\DefaultController::editCommentSpottedAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'id',    ),    1 =>     array (      0 => 'text',      1 => '/spotted_a/editcomment',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_delete_comment_spotted' => array (  0 =>   array (    0 => 'id',  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\SpottedBundle\\Controller\\DefaultController::deleteCommentSpottedAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'id',    ),    1 =>     array (      0 => 'text',      1 => '/spotted_a/deletecomment',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_test_id' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\SpottedBundle\\Controller\\DefaultController::fooAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/spotted_a/test_id',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'annonce_homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\AnnonceBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/Annonces_a/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'evenement_homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\EvenementBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/Events_a/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_afficher_events' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\EvenementBundle\\Controller\\DefaultController::afficherAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/Events_a/afficherevent',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_ajouter_events' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\EvenementBundle\\Controller\\DefaultController::ajoutAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/Events_a/ajouterevent',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_supprimer_events' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\EvenementBundle\\Controller\\DefaultController::supprimerAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/Events_a/supprimerevent',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_modifier_events' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\EvenementBundle\\Controller\\DefaultController::modifierAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/Events_a/modifierevent',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_rechercher_events_club' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\EvenementBundle\\Controller\\DefaultController::rechercheClubAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/Events_a/recherchereventclub',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_rechercher_events_date' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\EvenementBundle\\Controller\\DefaultController::rechercheDateAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/Events_a/recherchereventdate',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_rechercher_events_nom' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\EvenementBundle\\Controller\\DefaultController::rechercheNomAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/Events_a/recherchereventnom',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'club_homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\ClubBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/Clubs_a/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'club_ajout' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\ClubBundle\\Controller\\gererclubController::AjoutAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/Clubs_a/ajout',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'club_affiche' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\ClubBundle\\Controller\\gererclubController::AfficheAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/Clubs_a/affiche',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'club_recherche' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\ClubBundle\\Controller\\gererclubController::RechercheAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/Clubs_a/recherche',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'club_supprime' => array (  0 =>   array (    0 => 'id',  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\ClubBundle\\Controller\\gererclubController::DeleteAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'id',    ),    1 =>     array (      0 => 'text',      1 => '/Clubs_a/Delete',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_club_modifier' => array (  0 =>   array (    0 => 'id',  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\ClubBundle\\Controller\\gererclubController::ModifierAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '',      2 => '[^/]++',      3 => 'id',    ),    1 =>     array (      0 => 'text',      1 => '/Clubs_a/modifier',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'store_homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\StoreBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/store_a/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'user_homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'EspritEntreAide\\UserBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/account/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        '_admin' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'AppBundle\\Controller\\DefaultController::adminAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/account/admin',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'fos_user_security_login' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'fos_user.security.controller:loginAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/login',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'fos_user_security_check' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'fos_user.security.controller:checkAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/login_check',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'fos_user_security_logout' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'fos_user.security.controller:logoutAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/logout',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'fos_user_profile_show' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'fos_user.profile.controller:showAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/profile/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'fos_user_profile_edit' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'fos_user.profile.controller:editAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/profile/edit',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'fos_user_registration_register' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'fos_user.registration.controller:registerAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/register/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'fos_user_registration_check_email' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'fos_user.registration.controller:checkEmailAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/register/check-email',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'fos_user_registration_confirm' => array (  0 =>   array (    0 => 'token',  ),  1 =>   array (    '_controller' => 'fos_user.registration.controller:confirmAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'token',    ),    1 =>     array (      0 => 'text',      1 => '/register/confirm',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'fos_user_registration_confirmed' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'fos_user.registration.controller:confirmedAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/register/confirmed',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'fos_user_resetting_request' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'fos_user.resetting.controller:requestAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/resetting/request',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'fos_user_resetting_send_email' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'fos_user.resetting.controller:sendEmailAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/resetting/send-email',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'fos_user_resetting_check_email' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'fos_user.resetting.controller:checkEmailAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/resetting/check-email',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'fos_user_resetting_reset' => array (  0 =>   array (    0 => 'token',  ),  1 =>   array (    '_controller' => 'fos_user.resetting.controller:resetAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'token',    ),    1 =>     array (      0 => 'text',      1 => '/resetting/reset',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'fos_user_change_password' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'fos_user.change_password.controller:changePasswordAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/profile/change-password',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'fos_user_update_email_confirm' => array (  0 =>   array (    0 => 'token',  ),  1 =>   array (    '_controller' => 'fos_user.confirm.email.update.controller:confirmEmailUpdateAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'token',    ),    1 =>     array (      0 => 'text',      1 => '/profile/confirm-email-update',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+    );
+        }
+    }
+
+    public function generate($name, $parameters = array(), $referenceType = self::ABSOLUTE_PATH)
+    {
+        if (!isset(self::$declaredRoutes[$name])) {
+            throw new RouteNotFoundException(sprintf('Unable to generate a URL for the named route "%s" as such route does not exist.', $name));
+        }
+
+        list($variables, $defaults, $requirements, $tokens, $hostTokens, $requiredSchemes) = self::$declaredRoutes[$name];
+
+        return $this->doGenerate($variables, $defaults, $requirements, $tokens, $parameters, $name, $referenceType, $hostTokens, $requiredSchemes);
+    }
+}

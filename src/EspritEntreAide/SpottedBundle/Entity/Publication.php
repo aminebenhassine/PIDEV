@@ -3,7 +3,7 @@
 namespace EspritEntreAide\SpottedBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Publication
  *
@@ -36,6 +36,13 @@ class Publication
     private $descP;
 
     /**
+     * @ORM\Column(type="string")
+     *
+     * @Assert\NotBlank (message="Ajouter une image png")
+     * @Assert\File(mimeTypes={ "image/png" })
+     */
+    private $image;
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="date_p", type="date", nullable=true)
@@ -53,7 +60,7 @@ class Publication
      * @ORM\ManyToOne(targetEntity="EspritEntreAide\UserBundle\Entity\User")
      * @ORM\JoinColumn(name="id_user",referencedColumnName="id")
      */
-    private $idUser;
+    public $idUser;
 
     /**
      * @var int
@@ -271,5 +278,22 @@ class Publication
     {
         return $this->dateModif;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param mixed $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
 }
 
