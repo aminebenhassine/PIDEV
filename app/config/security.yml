@@ -3,12 +3,14 @@ security:
         FOS\UserBundle\Model\UserInterface: bcrypt
 
     role_hierarchy:
-        ROLE_ADMIN:       ROLE_USER
+        ROLE_RESPONSABLE_SUPER_ADMIN: ROLE_RESPONSABLE_SUPER_ADMIN
         ROLE_SUPER_ADMIN: ROLE_ADMIN
-        ROLE_ETUDIANT: ROLE_ETUDIANT
+        ROLE_ADMIN:       ROLE_USER
         ROLE_ENSEIGNANT: ROLE_ENSEIGNANT
-        ROLE_RESPOONSABLE_STORE: ROLE_RESPOONSABLE_STORE
-        ROLE_RESPOONSABLE_CLUB: ROLE_RESPOONSABLE_CLUB
+        ROLE_RESPONSABLE_STORE: ROLE_RESPONSABLE_STORE
+        ROLE_RESPONSABLE_CLUB: ROLE_RESPONSABLE_CLUB
+        ROLE_ETUDIANT: ROLE_ETUDIANT
+        ROLE_USER: ROLE_USER
 
     providers:
         fos_userbundle:
@@ -30,8 +32,3 @@ security:
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/, role: ROLE_ADMIN }
-        - { path: ^/annonces , role: ROLE_ETUDIANT }
-        - { path: ^/docs , role: ROLE_ENSEIGNANT }
-        - { path: ^/events , role: ROLE_RESPOONSABLE_CLUB }
-        - { path: ^/spotted , role: ROLE_ETUDIANT }
-        - { path: ^/club , role: ROLE_RESPOONSABLE_CLUB }

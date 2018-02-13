@@ -13,3 +13,5 @@
 !var/SymfonyRequirements.php
 /.web-server-pid
 vendor/friendsofsymfony/user-bundle/
+/.idea
+/.idea/*

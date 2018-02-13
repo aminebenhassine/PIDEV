@@ -1,5 +1,195 @@
 <html>
 <style>
+    /**********************************
+Responsive navbar-brand image CSS
+- Remove navbar-brand padding for firefox bug workaround
+- add 100% height and width auto ... similar to how bootstrap img-responsive class works
+***********************************/
+    .navbar {
+        min-height: 30px !important;
+
+    }
+    a.navbar-brand {
+        color: white !important;
+    }
+
+    nav.navbar.navbar-default.navnav {
+        background-color: #4c4c4c;
+        min-height:  20px !important;
+        font-size:  12px !important;
+        color:  white !important;
+    }
+    nav.navbar.navbar-default.navnav li a {
+        background-color: #4c4c4c;
+        min-height:  20px !important;
+        font-size:  12px !important;
+        color:  white !important;
+    }
+    nav.navbar.navbar-default.navnav li a:hover{
+
+        color:  grey !important;
+    }
+
+    .navnav {
+
+        color:  white !important;
+    }
+
+    .navbar > li > a {
+        color: #000000;
+        font-size: 12px !important;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    .navbar .container-fluid .navbar-brand {
+        margin: 0 !important;
+
+    }
+
+    .navbar-brand {
+        padding: 0px;
+    }
+    .navbar-brand>img {
+        height: 100%;
+        padding: 15px;
+        width: auto;
+    }
+
+
+
+
+
+
+
+    /*************************
+    EXAMPLES 2-7 BELOW
+    **************************/
+
+    /* EXAMPLE 2 (larger logo) - simply adjust top bottom padding to make logo larger */
+
+    .example2 .navbar-brand>img {
+        padding: 7px 15px;
+    }
+
+
+    /* EXAMPLE 3
+
+    line height is 20px by default so add 30px top and bottom to equal the new .navbar-brand 80px height  */
+
+    .example3 .navbar-brand {
+        height: 80px;
+    }
+
+    .example3 .nav >li >a {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .example3 .navbar-toggle {
+        padding: 10px;
+        margin: 25px 15px 25px 0;
+    }
+
+
+    /* EXAMPLE 4 - Small Narrow Logo*/
+    .example4 .navbar-brand>img {
+        padding: 7px 14px;
+    }
+
+
+    /* EXAMPLE 5 - Logo with Text*/
+    .example5 .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+    .example5 .navbar-brand>img {
+        padding: 7px 14px;
+    }
+
+
+    /* EXAMPLE 6 - Background Logo*/
+    .example6 .navbar-brand{
+        background: url(https://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png) center / contain no-repeat;
+        width: 200px;
+    }
+
+
+
+
+
+    /* EXAMPLE 8 - Center on mobile*/
+    @media only screen and (max-width : 768px){
+        .example-8 .navbar-brand {
+            padding: 0px;
+            transform: translateX(-50%);
+            left: 50%;
+            position: absolute;
+        }
+        .example-8 .navbar-brand>img {
+            height: 100%;
+            width: auto;
+            padding: 7px 14px;
+        }
+    }
+
+
+    /* EXAMPLE 8 - Center Background */
+    .example-8 .navbar-brand {
+        background: url(https://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png) center / contain no-repeat;
+        width: 200px;
+        transform: translateX(-50%);
+        left: 50%;
+        position: absolute;
+    }
+
+
+
+
+
+    /* EXAMPLE 9 - Center with Flexbox and Text*/
+    .brand-centered {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    .brand-centered .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+    .navbar-toggle {
+        z-index: 1;
+    }
+
+
+
+
+    /* CSS Transform Align Navbar Brand Text ... This could also be achieved with table / table-cells */
+    .navbar-alignit .navbar-header {
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        height: 50px;
+    }
+    .navbar-alignit .navbar-brand {
+        top: 50%;
+        display: block;
+        position: relative;
+        height: auto;
+        transform: translate(0,-50%);
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+
+
+
+
+    .navbar-nav>li>.dropdown-menu {
+        z-index: 9999;
+    }
+
     .headertop {
         background-color: #383838;
         color: white;
@@ -312,24 +502,68 @@
 
     {% endblock %}
 </head>
-{% if (is_granted('ROLE_ENSEIGNANT')) or (is_granted('ROLE_ETUDIANT')) %}
+{% if (is_granted('ROLE_ENSEIGNANT')) or (is_granted('ROLE_ETUDIANT')) or (is_granted('ROLE_RESPONSABLE_CLUB')) or (is_granted('ROLE_RESPONSABLE_SUPER_ADMIN')) %}
 
-<div class="headertop">
-    <ul>
-        {% if is_granted('ROLE_ENSEIGNANT') %}
-            <li>Gerer Docs</li>
-        {% elseif is_granted('ROLE_ETUDIANT')  %}
-            <li>Gerer Annonces</li>
-        {% elseif is_granted('ROLE_RESPOONSABLE_CLUB')  %}
-            <li>Gerer Clubs</li>
-        {% elseif is_granted('ROLE_RESPOONSABLE_STORE')  %}
-            <li>Gerer Demandes..</li>
-        {% else %}
-            inconnue
-        {% endif %}
+    <nav class="navbar navbar-default navnav">
+        <div class="container-fluid00">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar9">
+                    <span class="sr-only">Vous étes connecté en tant que </span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
 
-    </ul>
-</div>
+            <div class="brand-centered">
+                <a class="navbar-brand" href="#">
+
+                    Vous étes connecté en tant que &nbsp;
+                    <span style="color:red !important;">
+                        {% if (is_granted('ROLE_RESPONSABLE_CLUB')) %}
+                            Responsable Club
+                        {% elseif  (is_granted('ROLE_ENSEIGNANT')) %}
+                            Enseignant
+                        {% elseif  (is_granted('ROLE_RESPONSABLE_CLUB')) %}
+                            Responsable Club
+                        {% elseif  (is_granted('ROLE_RESPONSABLE_STORE')) %}
+                            Responsable Store
+                        {% elseif  (is_granted('ROLE_ETUDIANT')) %}
+                            Etudiant
+                        {% elseif  (is_granted('ROLE_RESPONSABLE_SUPER_ADMIN')) %}
+                            Super Admin
+                        {% elseif  (is_granted('ROLE_ADMIN')) %}
+                            Admin
+                        {% else %}
+                            User
+                        {% endif %}
+                    </span>
+                </a>
+            </div>
+
+            <div id="navbar9" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="active"><a href="#">Home</a></li>
+                    {% if (is_granted('ROLE_RESPONSABLE_CLUB')) %} <li><a href="#">Gérer Clubs</a></li>
+                    {% elseif  (is_granted('ROLE_ENSEIGNANT')) %} <li><a href="#">Gérer Documents</a></li>
+                    {% elseif  (is_granted('ROLE_RESPONSABLE_STORE')) %}<li><a href="#"> Gérer demandes</a></li>
+                    {% elseif  (is_granted('ROLE_RESPONSABLE_CLUB')) %}<li><a href="#"> Gérer évenements</a></li>
+                    {% elseif  (is_granted('ROLE_RESPONSABLE_SUPER_ADMIN')) %}<li><a href="#"> Tableau de bord</a></li>
+                    {% elseif  (is_granted('ROLE_ETUDIANT')) %}<li><a href="#"> Gérer Annonces</a></li>
+                    {% else %}
+                        User
+                    {% endif %}
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+
 {% endif %}
 
 <div class="section-header">
@@ -342,11 +576,11 @@
                 <div class="col-md-8 middlebarmenu">
                     <ul class="snip1189">
                         <li class="current"><a href="#">Home</a></li>
-                        <li><a href="{{ path('_annonces') }}">Annonces</a></li>
-                        <li><a href="{{ path('_events') }}">Events</a></li>
-                        <li><a href="{{ path('_club') }}">Club</a></li>
-                        <li><a href="{{ path('_docs') }}">Docs</a></li>
-                        <li><a href="{{ path('_spotted') }}">Spotted</a></li>
+                        <li><a href="{{ path('annonce_homepage') }}">Annonces</a></li>
+                        <li><a href="{{ path('evenement_homepage') }}">Events</a></li>
+                        <li><a href="{{ path('club_homepage') }}">Club</a></li>
+                        <li><a href="{{ path('store_homepage') }}">Docs</a></li>
+                        <li><a href="{{ path('spotted_homepage') }}">Spotted</a></li>
 
                     </ul>
                 </div>
@@ -355,14 +589,14 @@
                     <ul class="snip1189" style="padding-top: 12px !important;">
                         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                             {{ app.user.username }}
-                            <li class="loginperso"><a href="logout">Logout</a></li>
+                            <li class="loginperso"><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
                         {% endif %}
 
 
                         {% if  is_granted('IS_AUTHENTICATED_FULLY') == false %}
 
-                            <li class="loginperso"><a href="login">Login</a></li>
-                            <li class="singup"><a href="register">Register</a></li>
+                            <li class="loginperso"><a href="{{ path('fos_user_security_login') }}">Login</a></li>
+                            <li class="singup"><a href="{{ path('fos_user_registration_register') }}">Register</a></li>
                         {% endif %}
                     </ul>
 
@@ -530,7 +764,7 @@
                         <p> Vous cherchez un objet que vous avez perdu ou le propriétaire d'un objet que vos avez trouvé? Vous avez besoin d'un covoiturage ou d'une colocation? Ou peut-être cherchez vous un stage ? Quoi qui vous intrigue, et quelque soit ce que vous cherchez, ne cherchez pas trop, vous êtes à la bonne adresse, dans votre espace de partage de vos annonces</p>
 
                         <div class="readmore-w3">
-                            <a class="readmore" href="{{ path('_annonces') }}">Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            <a class="readmore" href="{{ path('annonce_homepage') }}">Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <div class="col-md-6 bottomgridimg">
@@ -548,7 +782,7 @@
                         <p>Etre étudiant c’est aussi partager des moments conviviaux et festifs au sein de la communauté Espritienne. Chaque semaine, une pléiade d’événements (musicaux, écologiques etc) est organisée par les étudiants et leurs enseignants pour enrichir l’atmosphère de l’école et continuer de rayonner tant sur l’aspect académique que sur l’aspect culturel.</p>
 
                         <div class="readmore-w3">
-                            <a class="readmore" href="{{ path('_events') }}">Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            <a class="readmore" href="{{ path('evenement_homepage') }}">Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <div class="clearfix"></div>
@@ -562,7 +796,7 @@
 
 
                         <div class="readmore-w3">
-                            <a class="readmore"  href="{{ path('_spotted') }}">Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            <a class="readmore"  href="{{ path('spotted_homepage') }}">Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <div class="col-md-6 bottomgridimg">
@@ -579,7 +813,7 @@
                         <p>Notre service <b>Impression</b> vous permet de lancer vos impressions depuis n’importe quel appareil connecté (Ordinateur, Tablette, Mobile...). Il vous suffit ensuite de passer en boutique pour récupérer vos documents !</p>
 
                         <div class="readmore-w3">
-                            <a class="readmore"  href="{{ path('_docs') }}" >Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            <a class="readmore"  href="{{ path('store_homepage') }}" >Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <div class="clearfix"></div>
@@ -590,7 +824,7 @@
                         <p>Au sein d’Esprit, les associations et clubs remplissent plusieurs rôles étant donné la diversité des motivations qui animent ceux qui en sont à l’origine. Conscients de l’importance de la vie associative, les étudiants jouent un rôle important dans l’élaboration et la transmission des messages aux destinataires.</p>
 
                         <div class="readmore-w3">
-                            <a class="readmore"  href="{{ path('_club') }}" >Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            <a class="readmore"  href="{{ path('club_homepage') }}" >Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <div class="col-md-6 bottomgridimg">

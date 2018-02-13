@@ -33,3 +33,30 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+    club.image_uploader:
+     class: EspritEntreAide\ClubBundle\ImageUpload
+     arguments: ['%images_directory%']
+
+
+
+
+    Club.doctrine_image_listener:
+     class: EspritEntreAide\ClubBundle\Entity\UploadImageListener
+     arguments: ['@Club.image_uploader']
+     tags:
+       - { name: doctrine.event_listener, event: prePersist }
+       - { name: doctrine.event_listener, event: preUpdate }
+
+    Publication.image_uploader:
+     class: EspritEntreAide\SpottedBundle\ImageUpload
+     arguments: ['%images_directory%']
+
+
+
+
+    Publication.doctrine_image_listener:
+     class: EspritEntreAide\SpottedBundle\Entity\UploadImageListener
+     arguments: ['@Publication.image_uploader']
+     tags:
+       - { name: doctrine.event_listener, event: prePersist }
+       - { name: doctrine.event_listener, event: preUpdate }
