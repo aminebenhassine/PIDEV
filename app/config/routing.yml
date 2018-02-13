@@ -16,7 +16,7 @@ _annonces:
 
 _club:
     path:     /club
-    defaults: { _controller: AppBundle:Default:club }
+    defaults: { _controller: ClubBundle:Default:index }
 
 _events:
     path:     /events
@@ -37,8 +37,24 @@ _admin:
     defaults: { _controller: AppBundle:Default:admin }
 
 club_ajout:
-    path:     /ajout
+    path:     /ajoutclub
     defaults: { _controller: ClubBundle:gererclub:Ajout }
+
+club_affiche:
+    path:     /afficheclub
+    defaults: { _controller: ClubBundle:gererclub:Affiche }
+
+club_recherche:
+    path:     /rechercheclub
+    defaults: { _controller: ClubBundle:gererclub:Recherche }
+
+club_supprime:
+    path:     /Deleteclub/{id}
+    defaults: { _controller: ClubBundle:gererclub:Delete }
+
+club_modifier:
+    path:     /modifierclub/{id}
+    defaults: { _controller: ClubBundle:gererclub:Modifier }
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"

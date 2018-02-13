@@ -2,8 +2,11 @@
 
 namespace EspritEntreAide\ClubBundle\Form;
 
+
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -19,6 +22,8 @@ class ClubType extends AbstractType
             ->add('dateCreation')
             ->add('idUser')
             ->add('descC')
+            ->add('image', FileType::class, array('label' => 'Image(PNG)','data_class'=>null))
+
             ->add('Ajouter',SubmitType ::class);
 
     }/**

@@ -3,6 +3,8 @@
 namespace EspritEntreAide\ClubBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * Club
@@ -55,6 +57,18 @@ class Club
      * @ORM\Column(name="desc_c", type="text", nullable=true)
      */
     private $descC;
+
+    /**
+     * @ORM\Column(type="string")
+     *
+     * @Assert\NotBlank (message="Ajouter une image png")
+     * @Assert\File(mimeTypes={ "image/png" })
+     */
+    private $image;
+
+
+
+
 
 
     /**
@@ -186,5 +200,24 @@ class Club
     {
         return $this->descC;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param mixed $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+
+
 }
 

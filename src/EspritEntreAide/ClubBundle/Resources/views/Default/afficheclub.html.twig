@@ -1,0 +1,58 @@
+{% extends ":default:test.html.twig" %}
+
+
+{% block title %}Club{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        .important { color: #336699; }
+
+    </style>
+{% endblock %}
+{% block content %}
+<div class="big-div-club">
+    <h1>Interface club</h1>
+</div>
+<center>
+<h1>Liste des Club</h1>
+
+<table>
+    <tr>
+        <th>ID club</th>
+        <th>ID user</th>
+        <th>nom</th>
+        <th>mail</th>
+        <th>date creation</th>
+        <th>Description</th>
+
+
+
+
+
+
+    </tr>
+    {% for c in club %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.idUser }}</td>
+            <td>{{ c.nomC}}</td>
+            <td>{{ c.mailC}}</td>
+            <td>{{ c.dateCreation |date}}</td>
+            <td>{{ c.descC}}</td>
+            <td><img src="{{ asset('uploads/images/' ~ c.image) }}" height="10px" width="10px"> </td>
+
+
+
+
+        </tr>
+    {% endfor %}
+</table>
+
+</center>
+
+    <p class="important">
+
+    </p>
+{% endblock %}
+
+
