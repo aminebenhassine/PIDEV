@@ -41,9 +41,15 @@
                 <td>{{ c.dateCreation |date}}</td>
                 <td>{{ c.idUser}}</td>
                 <td>{{ c.descC}}</td>
-                <td> <img src= " {{ asset ('uploads/images/' ~ c.image) }}"  width="15%"  height="15%" ></td>
+                <td> <img src= " {{ asset ('uploads/images/' ~ c.image) }}"  width="15%"!imp  height="15%" ></td>
+                {% if (is_granted('ROLE_RESPONSABLE_SUPER_ADMIN'))
+                or(is_granted('ROLE_SUPER_ADMIN'))
+                or(is_granted('ROLE_ADMIN'))
+                or(is_granted('ROLE_RESPONSABLE_CLUB'))
+                %}
                 <td><a href="{{ path('club_supprime',{'id':c.id}) }}">Supprimer</a></td>
                 <td><a href="{{ path('club_modifier',{'id':c.id}) }}">Modifier</a></td>
+                {% endif %}
 
             </tr>
         {% endfor %}
